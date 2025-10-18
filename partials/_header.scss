@@ -1,0 +1,16 @@
+@use 'variables';
+
+header {
+    background-color: variables.$primaryBgColor;
+    padding: 5px;
+    nav {
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+        }
+    }
+}

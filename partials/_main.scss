@@ -1,0 +1,50 @@
+@use './variables';
+@use "./mixins";
+
+h2 {
+    background-color: variables.$backgroundColor;
+}
+
+.gallery {
+    @include mixins.flex-wrap;
+}
+
+img {
+    width: 33%;
+    height: 500px;
+}
+
+section {
+    position: relative;
+
+}
+
+h2 {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.fruit-hover {
+    position: relative;
+    figure {
+        position: relative;
+        display: inline-block;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+figcaption {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.fruit-hover figure:hover figcaption {
+    opacity: 1;
+}
